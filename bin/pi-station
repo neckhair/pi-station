@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'commander/import'
+require 'pi_station'
+
+program :version, '0.0.1'
+program :description, 'Raspberry Pi Weather Station'
+
+command :report do |c|
+  c.syntax = 'pi-station report [options]'
+  c.summary = 'Reports data to elasticsearch'
+  c.example 'Report to remote Elasticsearch', 'pi-station report --url http://my-es.domain.com:9200'
+  c.option '--url STRING', String, 'The elasticsearch url'
+
+  c.action do |args, options|
+    options.default url: 'http://localhost:9200'
+    PiStation::Commands::Report.new(args, options).run
+  end
+end
