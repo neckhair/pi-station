@@ -4,3 +4,4 @@ module PiStation
 end
 
 require 'pi_station/inputs/base'
+require 'pi_station/inputs/meteo_schweiz'

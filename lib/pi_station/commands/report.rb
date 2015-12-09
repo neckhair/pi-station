@@ -7,8 +7,14 @@ module PiStation
       end
 
       def run
-        o = PiStation::Outputs::Base.new
-        o.write
+        inputs = { aussen: PiStation::Inputs::MeteoSchweiz.new('BUS') }
+        output = PiStation::Outputs::Base.new
+
+        inputs.each_pair do |location, input|
+          data_bag = input.read
+          data_bag.location = location
+          output.write data_bag
+        end
       end
     end
   end

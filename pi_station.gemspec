@@ -15,4 +15,5 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'commander', '~> 4.3.5'
   s.add_development_dependency 'rspec', '~> 3.4.0'
+  s.add_development_dependency 'timecop'
 end

@@ -24,6 +24,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
+    timecop (0.8.0)
 
 PLATFORMS
   ruby
@@ -31,6 +32,7 @@ PLATFORMS
 DEPENDENCIES
   pi-station!
   rspec (~> 3.4.0)
+  timecop
 
 BUNDLED WITH
    1.10.6
