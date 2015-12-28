@@ -22,7 +22,7 @@ module PiStation
       end
 
       def output
-        @output ||= PiStation::Outputs::Base.new
+        @output ||= PiStation::Outputs::Base.new @options.url
       end
     end
   end
