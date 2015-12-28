@@ -17,7 +17,7 @@ RSpec.describe PiStation::DataBag do
     it 'renders a valid json string' do
       Timecop.freeze '2015-12-31 12:00' do
         expect(instance.to_json).
-          to eq "{\"timestamp\":1451559600000,\"location\":\"wohnzimmer\",\"temperature\":22.0}"
+          to eq "{\"timestamp\":1451559600000,\"location\":\"wohnzimmer\",\"value\":22.0}"
       end
     end
   end

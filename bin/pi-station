@@ -12,9 +12,11 @@ command :report do |c|
   c.summary = 'Reports data to elasticsearch'
   c.example 'Report to remote Elasticsearch', 'pi-station report --url http://my-es.domain.com:9200'
   c.option '--url STRING', String, 'The elasticsearch url'
+  c.option '--serial STRING', String, 'The Serial port Arduino sends data to'
 
   c.action do |args, options|
     options.default url: 'http://localhost:9200'
+    options.default serial: '/dev/ttyACM0'
     PiStation::Commands::Report.new(args, options).run
   end
 end

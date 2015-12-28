@@ -3,6 +3,7 @@ PATH
   specs:
     pi-station (0.0.1)
       commander (~> 4.3.5)
+      serialport
 
 GEM
   remote: https://rubygems.org/
@@ -24,6 +25,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
+    serialport (1.3.1)
     timecop (0.8.0)
 
 PLATFORMS
