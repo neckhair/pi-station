@@ -17,7 +17,7 @@ module PiStation
       def inputs
         @inputs ||= {
           aussen: PiStation::Inputs::MeteoSchweiz.new('BUS'),
-          wohnzimmer: PiStation::Inputs::Serial.new(@options.serial),
+          innen: PiStation::Inputs::Serial.new(@options.serial),
         }
       end
 
