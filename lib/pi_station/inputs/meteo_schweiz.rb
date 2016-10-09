@@ -7,7 +7,7 @@ module PiStation
     class MeteoSchweiz
       def initialize(station_name)
         @station_name = station_name
-        @url = URI.parse("http://data.netcetera.com/smn/smn/#{@station_name}")
+        @url = URI.parse("http://opendata.netcetera.com/smn/smn/#{@station_name}")
       end
 
       def read
